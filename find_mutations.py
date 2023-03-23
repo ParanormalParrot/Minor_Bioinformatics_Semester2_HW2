@@ -1,15 +1,15 @@
 import pandas
 
-df = pandas.read_csv('simple_somatic_mutation.open.tsv.gz', sep='\t', usecols=['icgc_donor_id', 'gene_affected'])
+df = pandas.read_csv('simple_somatic_mutation.open.tsv.gz', sep='\t', usecols=['gene_affected'])
 
-APC = "ENSG00000134982"
+HRAS = "ENSG00000174775"
 TP53 = "ENSG00000141510"
-KRAS = "ENSG00000133703"
+KDM6A = "ENSG00000147050"
 PIK3CA = "ENSG00000121879"
-SMAD4 = "ENSG00000141646"
+KMT2D = "ENSG00000167548"
 
-print("Mutations in APC gene:  \t%s" % len(df[df.gene_affected == APC]))
-print("Mutations in TP53 gene: \t%s" % len(df[df.gene_affected == TP53]))
-print("Mutations in KRAS gene: \t%s" % len(df[df.gene_affected == KRAS]))
+print("Mutations in HRAS gene: \t%s" % len(df[df.gene_affected == HRAS]))
+print("Mutations in TP53 gene:  \t%s" % len(df[df.gene_affected == TP53]))
+print("Mutations in KDM6A gene: \t%s" % len(df[df.gene_affected == KDM6A]))
 print("Mutations in PIK3CA gene: \t%s" % len(df[df.gene_affected == PIK3CA]))
-print("Mutations in SMAD4 gene: \t%s" % len(df[df.gene_affected == SMAD4]))
+print("Mutations in KMT2D gene: \t%s" % len(df[df.gene_affected == KMT2D]))
